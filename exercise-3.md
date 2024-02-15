@@ -20,7 +20,7 @@
 
    `src/frontend/index.jsx`
 
-   ```jsx
+   ```js
    import ForgeReconciler, { Text } from "@forge/react";
    import React, { useEffect, useState } from "react";
 
@@ -54,7 +54,7 @@
 
    `src/resolvers/index.js`
 
-   ```jsx
+   ```js
    import Resolver from "@forge/resolver";
 
    const resolver = new Resolver();
@@ -71,7 +71,7 @@
 
    If we were to examine the req object that gets logged out in line 6, it would look something like:
 
-   ```jsxon
+   ```json
    {
      "payload": {
        "example": "my-invoke-variable"
