@@ -67,7 +67,7 @@
    export const handler = resolver.getDefinitions();
    ```
 
-   This file contains all the backend resolver functions that the app can invoke from the frontend.We’ve only defined a single function called getText that only does two things. It first logs the request context (req) and it also returns a response with a value of Hello, World! to the frontend.
+   This file contains all the backend resolver functions that the app can invoke from the frontend. We’ve only defined a single function called `getText` that only does two things. It first logs the request context (`req`) and it also returns a response with a value of `Hello, World!` to the frontend.
 
    If we were to examine the req object that gets logged out in line 6, it would look something like:
 
@@ -99,6 +99,6 @@
    }
    ```
 
-   Inside the payload property, we have access to the payload that was sent from the frontend.Additionally, the context property has various pieces of information attached that may be useful depending on your need and use case.
+   Inside the payload property, we have access to the payload that was sent from the frontend. Additionally, the context property has various pieces of information attached that may be useful depending on your need and use case.
 
    **Note:** the context values will differ depending on the [module](https://developer.atlassian.com/platform/forge/manifest-reference/modules/).
