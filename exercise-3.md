@@ -50,7 +50,7 @@
 
    In this example, we’re calling invoke which allows the app to run our backend functions.
 
-   In line 10, the specific function we’re invoking is the `getText` function which is located in the backend hand. This example also details how you would pass a payload object from the frontend to the backend (more details below).
+   In line 10, the specific function we’re invoking is the `getText` function which is located in the backend. This example also details how you would pass a payload object from the frontend to the backend (more details below).
 
    `src/resolvers/index.js`
 
