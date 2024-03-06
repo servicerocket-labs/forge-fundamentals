@@ -10,18 +10,18 @@ You can install your app to multiple Atlassian sites. However, app data won't be
 
 ## Forge CLI and Node
 
-The Forge CLI requires an actively supported version of Node LTS to be installed. For the purposes of this course, we will be using **Node.js v18**. It is usually good practice to manage different versions of Node using a version manager. We’ll be using `nvm` in this example but you can also use others such as `volta` or `fnm`.
+The Forge CLI requires an actively supported version of Node LTS to be installed. For the purposes of this course, we will be using **Node v18** as it matches the version used by the [Forge runtime environment](https://developer.atlassian.com/platform/forge/runtime-reference/). It is usually good practice to manage different versions of Node using a version manager. We’ll be using `nvm` in this example but you can also use others such as `volta` or `fnm`.
 
 Refer to the official [get started guide](https://developer.atlassian.com/platform/forge/getting-started/) if you prefer a more OS-specific installation.
 
-Skip to **step 3** if you already have a Node version installed.
+Skip to **step 3** if you already have a Node v18 installed.
 
 1. Install [nvm](https://github.com/nvm-sh/nvm)
 
 2. Install the latest Node LTS release and set it as the default version
 
    ```shell
-   nvm install --lts && nvm alias default lts/\*
+   nvm install 18 && nvm alias default 18*
    ```
 
 3. Install the Forge CLI globally
