@@ -54,7 +54,7 @@ modules:
       resource: macro
       render: native
       resolver:
-        function: space-page-resolver
+        function: macro-resolver
       title: forge-starter-app
   confluence:spacePage:
     - key: forge-starter-app-space-page
@@ -142,7 +142,7 @@ First, let’s update the `resolvers` directory to have two resolver files in or
    export { spacePageHandler } from "./resolvers/spacePage";
    ```
 
-4. After separating the resolvers into two separate files, let’s do the same for our frontend.Rename `src/frontend/index.jsx` to `src/frontend/macro.jsx` and create a new file in the frontend directory called `space-page.jsx` with the following content:
+4. After separating the resolvers into two separate files, let’s do the same for our frontend. Rename `src/frontend/index.jsx` to `src/frontend/macro.jsx` and create a new file in the frontend directory called `space-page.jsx` with the following content:
 
    ```jsx
    import ForgeReconciler, { Text } from "@forge/react";

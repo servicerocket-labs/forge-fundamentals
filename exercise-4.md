@@ -32,19 +32,7 @@ If we look at the API docs for that particular endpoint, it gives us some useful
        - read:confluence-user
    ```
 
-2. Whenever you change permissions, you must deploy a new version of the app and upgrade your current installation to see the new changes.
-
-   Stop your tunnel and run the following commands in your terminal to deploy and upgrade your installation.
-
-   Follow the relevant prompts to complete the upgrade before restarting the tunnel.
-
-   ```shell
-   forge deploy
-   forge install --upgrade
-   forge tunnel
-   ```
-
-3. Next, we will add a new resolver function to our backend called `getCurrentUser`.
+2. Next, we will add a new resolver function to our backend called `getCurrentUser`.
 
    This is located in the same file as the getText function. We will base our code off the example provided to us by the docs with a few changes to ensure we’re returning the API response to the frontend.
 
@@ -56,7 +44,7 @@ If we look at the API docs for that particular endpoint, it gives us some useful
    import api, { route } from "@forge/api";
    ```
 
-4. Add a new resolver function to your file that fetches the current user.
+3. Add a new resolver function to your file that fetches the current user.
 
    ```jsx
    resolver.define("getCurrentUser", async () => {
@@ -101,7 +89,7 @@ If we look at the API docs for that particular endpoint, it gives us some useful
    export const handler = resolver.getDefinitions();
    ```
 
-5. Modify the frontend code to invoke the newly added getCurrentUser function.
+4. Modify the frontend code to invoke the newly added getCurrentUser function.
 
    ```jsx
    import ForgeReconciler, { Text } from "@forge/react";
@@ -134,6 +122,17 @@ If we look at the API docs for that particular endpoint, it gives us some useful
    );
    ```
 
-   The app should now greet the current user when the macro is added to a page.
+5. Whenever you change permissions, you must deploy a new version of the app and upgrade your current installation to see the new changes.
+
+   Stop your tunnel and run the following commands in your terminal to deploy and upgrade your installation.
+
+   Follow the relevant prompts to complete the upgrade.
+
+   ```shell
+   forge deploy
+   forge install --upgrade
+   ```
+
+   Upon deploying the latest changes, the app should now greet the current user when the macro is added to a page.
 
    ![](./img/exercise-4/macro-greeting.png)
