@@ -1,8 +1,8 @@
 # Exercise 2 - Deploying and installing your app
 
-**Note**: You must run the forge deploy command before forge install because an installation links your deployed app to an Atlassian site.
-
 To use your app, it must be installed onto an Atlassian site. The forge deploy command builds, compiles, and deploys your code; it'll also report any compilation errors. The forge install command then installs the deployed app onto an Atlassian site.
+
+**Note**: You must run the `forge deploy` command ***before*** `forge install` because an installation links your deployed app to an Atlassian site.
 
 1. Navigate to the app's top-level directory and deploy your app by running:
 

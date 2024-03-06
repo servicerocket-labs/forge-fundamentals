@@ -1,10 +1,10 @@
 # Exercise 1 - Building your first app
 
-For this course, we will be creating a Forge app that allows users to insert and interact with a macro on Confluence.
+Welcome to the course. We will be building a Forge app that extends the native functionality of Confluence by creating custom extensions that users can see and interact with.
 
 1. Navigate to the directory where you want create the app.
 
-2. Open up a terminal and initialise the app by running the following command:
+2. Open up a terminal and initialize the app by running the following command:
 
 ```shell
 forge create
@@ -26,11 +26,11 @@ forge create
 
 ![](./img/exercise-1/forge-create-template-confluence-macro.png)
 
-7. After a few seconds, a new subdirectory with the name of the app will be created in the current directory.
+7. After a few seconds, a new directory with the name of the app will be created.
 
 ![](./img/exercise-1/forge-create-complete.png)
 
-8. Change to the app subdirectory to see the app files.
+8. Change to the *forge-starter-app* directory to see the app files.
 
 ```shell
 cd forge-starter-app
@@ -88,9 +88,9 @@ Lets break down each line of the manifest:
     - title - the title of the macro which is displayed in the Confluence editor
   - function - specifies a list of functions that are called by the app’s modules
     - key - unique key for the specific function that is being defined
-    - handler - a pointer to the function responsible for handling invocations. Takes the format file.function
+    - handler - a pointer to the function responsible for handling invocations. Takes the format **file.function**
 - resources - specifies a list of static assets for the app
   - key - unique key for the specific resource
   - path - location of the static resource
 - app - specifies information about the app and its properties such as licensing
-  - id - automatically generated when running forge create. Represents an Atlassian resource identifier (ari) unique to your app.
+  - id - automatically generated when running forge create. Represents an **Atlassian resource identifier (ari)** unique to your app.
