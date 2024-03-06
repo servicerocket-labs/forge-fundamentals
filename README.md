@@ -2,7 +2,7 @@
 
 ## Course description
 
-An introductory training course that covers the basics of Forge, its architecture, key components, and how it integrates with other Atlassian products. This would include setting up a development environment, understanding the Forge CLI and using it to facilitate the development and deployment of Forge apps to various Atlassian products, and Forge apps.
+An introductory training course that covers the basics of Forge, its architecture, key components, and how it integrates with other Atlassian products. This would include setting up a development environment, understanding the Forge CLI and using it to facilitate the development and deployment of Forge apps to various Atlassian products.
 
 ## Table of contents
 
