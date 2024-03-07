@@ -14,3 +14,7 @@ An introductory training course that covers the basics of Forge, its architectur
 - [Exercise 5](./exercise-5.md)
 - [Exercise 6](./exercise-6.md)
 - [Exercise 7](./exercise-7.md)
+
+## App source code
+
+The completed soruce code can be found [here](./forge-starter-app/)
