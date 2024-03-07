@@ -25,7 +25,7 @@ resources:
   - key: spacePage
     path: src/frontend/space-page.jsx
 app:
-  id: ari:cloud:ecosystem::app/6c2a51fa-015c-4233-814b-86ae7d9992a3
+  id:
   runtime:
     name: nodejs18.x
 permissions:
