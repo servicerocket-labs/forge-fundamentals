@@ -1,5 +1,11 @@
 ## Quick start
 
+- Install dependencies by running:
+
+```
+npm install
+```
+
 - Register the app by running:
 
 ```

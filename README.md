@@ -17,4 +17,4 @@ An introductory training course that covers the basics of Forge, its architectur
 
 ## App source code
 
-The completed soruce code can be found [here](./forge-starter-app/)
+The completed source code as well as instructions on how to deploy and build the app can be found [here](./forge-starter-app/).
