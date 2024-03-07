@@ -1,0 +1,37 @@
+modules:
+  macro:
+    - key: forge-starter-app-hello-world-macro
+      resource: macro
+      render: native
+      resolver:
+        function: macro-resolver
+      title: forge-starter-app
+  confluence:spacePage:
+    - key: forge-starter-app-space-page
+      resource: spacePage
+      render: native
+      resolver:
+        function: space-page-resolver
+      route: forge-starter-app-space-page
+      title: forge-starter-app
+  function:
+    - key: macro-resolver
+      handler: index.macroHandler
+    - key: space-page-resolver
+      handler: index.spacePageHandler
+resources:
+  - key: macro
+    path: src/frontend/macro.jsx
+  - key: spacePage
+    path: src/frontend/space-page.jsx
+app:
+  id: ari:cloud:ecosystem::app/6c2a51fa-015c-4233-814b-86ae7d9992a3
+  runtime:
+    name: nodejs18.x
+permissions:
+  scopes:
+    - read:confluence-user
+  external:
+    fetch:
+      backend:
+        - "https://icanhazdadjoke.com"
