@@ -26,7 +26,7 @@ To start, we have to once again modify our `manifest.yml` to specify that our ap
    forge tunnel
    ```
 
-3. Update `src/frontend/space-page.jsx` and replace getUser with a new function called `getJoke`.
+3. Update `src/spacePage.js` and replace getUser with a new function called `getJoke`.
 
    To fetch from an external endpoint, we have to use the fetch API from the `@forge/api` package instead of the native implementation. [More info](https://developer.atlassian.com/platform/forge/runtime-reference/fetch-api/).
 
@@ -53,21 +53,21 @@ To start, we have to once again modify our `manifest.yml` to specify that our ap
    ```jsx
    import ForgeReconciler, { Button, Text } from "@forge/react";
    import React, { useEffect, useState } from "react";
-   
+
    import { invoke } from "@forge/bridge";
-   
+
    const App = () => {
      const [joke, setJoke] = useState(null);
-   
+
      const fetchJoke = async () => {
        const data = await invoke("getJoke");
        setJoke(data.joke);
      };
-   
+
      useEffect(() => {
        fetchJoke();
      }, []);
-   
+
      return (
        <>
          <Text>{joke ? joke : "Loading..."}</Text>
@@ -75,7 +75,7 @@ To start, we have to once again modify our `manifest.yml` to specify that our ap
        </>
      );
    };
-   
+
    ForgeReconciler.render(
      <React.StrictMode>
        <App />
