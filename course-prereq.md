@@ -1,4 +1,4 @@
-# Setting up your developer environment
+# Course pre-requisites
 
 ## Atlassian cloud developer site
 
@@ -10,7 +10,7 @@ You can install your app to multiple Atlassian sites. However, app data won't be
 
 ## Forge CLI and Node
 
-The Forge CLI requires an actively supported version of Node LTS to be installed. For the purposes of this course, we will be using **Node v18** as it matches the version used by the [Forge runtime environment](https://developer.atlassian.com/platform/forge/runtime-reference/). It is usually good practice to manage different versions of Node using a version manager. We’ll be using `nvm` in this example but you can also use others such as `volta` or `fnm`.
+The Forge CLI requires an actively supported version of Node LTS to be installed. For the purposes of this course, we will be using **Node v18** as it matches the version used by the [Forge runtime environment](https://developer.atlassian.com/platform/forge/runtime-reference/). It is usually good practice to manage different versions of Node using a version manager such as `nvm`.
 
 Refer to the official [get started guide](https://developer.atlassian.com/platform/forge/getting-started/) if you prefer a more OS-specific installation.
 
@@ -42,17 +42,17 @@ Skip to **step 3** if you already have a Node v18 installed.
    npm update -g @forge/cli
    ```
 
-6. Create or use an existing Atlassian API token to log in to the CLI. The CLI uses your token when running commands.
+6. Create or use an existing Atlassian API token to authenticate with Atlassian via the Forge CLI.
 
    a. Go to https://id.atlassian.com/manage/api-tokens.
 
-   b. Click Create API token.
+   b. Click `Create API token`.
 
-   c. Enter a label to describe your API token. For example, forge-api-token.
+   c. Enter a label to describe your API token. For example, `forge-api-token`.
 
-   d. Click Create.
+   d. Click `Create`.
 
-   e. Click Copy to clipboard and close the dialog.
+   e. Click `Copy` to clipboard and close the dialog.
 
 7. Log in to the Forge CLI to start using Forge commands
 
@@ -72,7 +72,7 @@ Skip to **step 3** if you already have a Node v18 installed.
 
    c. Enter the email address associated with your Atlassian account.
 
-   d. Enter your Atlassian API token. You copied this to the clipboard in step 6.
+   d. Enter your Atlassian API token (step 6).
 
 8. You will see a message similar to this confirming you are logged in:
 
