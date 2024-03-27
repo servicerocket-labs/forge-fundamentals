@@ -21,7 +21,7 @@ Skip to **step 3** if you already have a Node v18 installed.
 2. Install the latest Node LTS release and set it as the default version
 
    ```shell
-   nvm install 18 && nvm alias default 18*
+   nvm install 18 && nvm alias default 18
    ```
 
 3. Install the Forge CLI globally
