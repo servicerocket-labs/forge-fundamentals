@@ -43,47 +43,7 @@ resources:
     path: src/frontend/space-page.jsx
 ```
 
-We also took this opportunity to change some of the values for the `macro` module to be more descriptive and unique so that it doesn’t clash with any future modules that we may add.
-
-The updated `manifest.yml` should look like:
-
-```yaml
-modules:
-  macro:
-    - key: forge-starter-app-hello-world-macro
-      resource: main
-      render: native
-      resolver:
-        function: resolver
-      title: forge-starter-app
-  confluence:spacePage:
-    - key: forge-starter-app-space-page
-      resource: space-page
-      render: native
-      resolver:
-        function: space-page-resolver
-      route: forge-starter-app-space-page
-      title: forge-starter-app
-  function:
-    - key: resolver
-      handler: index.handler
-    - key: space-page-resolver
-      handler: index.spacePageHandler
-resources:
-  - key: main
-    path: src/frontend/index.jsx
-  - key: space-page
-    path: src/frontend/space-page.jsx
-app:
-  id: ari:cloud:ecosystem::app/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  runtime:
-    name: nodejs18.x
-permissions:
-  scopes:
-    - read:confluence-user
-```
-
-In addition to updating the manifest, we also need to create some new files and update some existing ones.
+We also need to create some new files and update some existing ones.
 
 First, let’s update the `resolvers` directory to have two resolver files in order to separate the logic: one for the macro and another for the space page.
 
@@ -178,9 +138,49 @@ First, let’s update the `resolvers` directory to have two resolver files in or
    );
    ```
 
-   Your app directory should look like the following:
+   We also took this opportunity to change some of the values for the `macro` module to be more descriptive and unique so that it doesn’t clash with any future modules that we may add.
 
-   ![](./img/exercise-6/directory.png)
+   The updated `manifest.yml` should look like:
+
+   ```yaml
+   modules:
+     macro:
+       - key: forge-starter-app-hello-world-macro
+         resource: macro
+         render: native
+         resolver:
+           function: resolver
+         title: forge-starter-app
+     confluence:spacePage:
+       - key: forge-starter-app-space-page
+         resource: space-page
+         render: native
+         resolver:
+           function: space-page-resolver
+         route: forge-starter-app-space-page
+         title: forge-starter-app
+     function:
+       - key: resolver
+         handler: index.macroHandler
+       - key: space-page-resolver
+         handler: index.spacePageHandler
+   resources:
+     - key: macro
+       path: src/frontend/macro.jsx
+     - key: space-page
+       path: src/frontend/space-page.jsx
+   app:
+     id: ari:cloud:ecosystem::app/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+     runtime:
+       name: nodejs18.x
+   permissions:
+     scopes:
+       - read:confluence-user
+   ```
+
+And your app directory should look like the following:
+
+![](./img/exercise-6/directory.png)
 
 5. The last step is to close our tunnel, deploy the changes and restart the tunnel.
 

@@ -26,7 +26,7 @@ To start, we have to once again modify our `manifest.yml` to specify that our ap
    forge tunnel
    ```
 
-3. Update `src/spacePage.js` and replace getUser with a new function called `getJoke`.
+3. Update `src/resolvers/space-page.js` and replace getUser with a new function called `getJoke`.
 
    To fetch from an external endpoint, we have to use the fetch API from the `@forge/api` package instead of the native implementation. [More info](https://developer.atlassian.com/platform/forge/runtime-reference/fetch-api/).
 
