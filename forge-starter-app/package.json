@@ -1,6 +1,6 @@
 {
   "name": "confluence-macro-ui-kit-2",
-  "version": "1.0.20",
+  "version": "1.0.25",
   "main": "index.js",
   "license": "MIT",
   "private": true,
@@ -12,9 +12,9 @@
     "eslint-plugin-react-hooks": "^4.6.0"
   },
   "dependencies": {
-    "@forge/bridge": "3.2.0",
-    "@forge/react": "9.1.4",
-    "@forge/resolver": "^1.5.28",
+    "@forge/bridge": "3.3.0",
+    "@forge/react": "10.1.0",
+    "@forge/resolver": "1.5.29",
     "react": "^18.2.0"
   }
 }

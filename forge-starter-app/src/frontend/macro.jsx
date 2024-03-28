@@ -1,7 +1,6 @@
-import ForgeReconciler, { Text } from "@forge/react";
+import ForgeReconciler, { Text, User } from "@forge/react";
 import React, { useEffect, useState } from "react";
 
-import { User } from "@forge/react";
 import { invoke } from "@forge/bridge";
 
 const App = () => {

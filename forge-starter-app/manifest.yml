@@ -8,7 +8,7 @@ modules:
       title: forge-starter-app
   confluence:spacePage:
     - key: forge-starter-app-space-page
-      resource: spacePage
+      resource: space-page
       render: native
       resolver:
         function: space-page-resolver
@@ -22,10 +22,10 @@ modules:
 resources:
   - key: macro
     path: src/frontend/macro.jsx
-  - key: spacePage
+  - key: space-page
     path: src/frontend/space-page.jsx
 app:
-  id:
+  id: ari:cloud:ecosystem::app/9ef392d1-4880-4666-ba35-0de558698c13
   runtime:
     name: nodejs18.x
 permissions:
@@ -34,4 +34,4 @@ permissions:
   external:
     fetch:
       backend:
-        - "https://icanhazdadjoke.com"
+        - https://icanhazdadjoke.com

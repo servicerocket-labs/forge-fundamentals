@@ -4,10 +4,6 @@ import Resolver from "@forge/resolver";
 
 const resolver = new Resolver();
 
-resolver.define("getText", (req) => {
-  return "Hello, World!";
-});
-
 resolver.define("getCurrentUser", async () => {
   const response = await api
     .asUser()
@@ -16,7 +12,8 @@ resolver.define("getCurrentUser", async () => {
         Accept: "application/json",
       },
     });
-  return await response.json();
+  const currentUser = await response.json();
+  return currentUser;
 });
 
 export const macroHandler = resolver.getDefinitions();
