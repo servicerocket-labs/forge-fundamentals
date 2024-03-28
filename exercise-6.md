@@ -51,31 +51,33 @@ The updated `manifest.yml` should look like:
 modules:
   macro:
     - key: forge-starter-app-hello-world-macro
-      resource: macro
+      resource: main
       render: native
       resolver:
-        function: macro-resolver
+        function: resolver
       title: forge-starter-app
   confluence:spacePage:
     - key: forge-starter-app-space-page
-      resource: spacePage
+      resource: space-page
       render: native
       resolver:
         function: space-page-resolver
       route: forge-starter-app-space-page
       title: forge-starter-app
   function:
-    - key: macro-resolver
-      handler: index.macroHandler
+    - key: resolver
+      handler: index.handler
     - key: space-page-resolver
       handler: index.spacePageHandler
 resources:
-  - key: macro
-    path: src/frontend/macro.jsx
-  - key: spacePage
+  - key: main
+    path: src/frontend/index.jsx
+  - key: space-page
     path: src/frontend/space-page.jsx
 app:
   id: ari:cloud:ecosystem::app/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  runtime:
+    name: nodejs18.x
 permissions:
   scopes:
     - read:confluence-user
@@ -139,7 +141,7 @@ First, let’s update the `resolvers` directory to have two resolver files in or
 
    ```jsx
    export { macroHandler } from "./resolvers/macro";
-   export { spacePageHandler } from "./resolvers/spacePage";
+   export { spacePageHandler } from "./resolvers/space-page";
    ```
 
 4. After separating the resolvers into two separate files, let’s do the same for our frontend. Rename `src/frontend/index.jsx` to `src/frontend/macro.jsx` and create a new file in the frontend directory called `space-page.jsx` with the following content:
