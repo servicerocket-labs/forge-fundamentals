@@ -89,3 +89,9 @@ Sign up for a free ngrok account and install the ngrok agent in order to run you
 2. Install the ngrok agent onto your machine: https://dashboard.ngrok.com/get-started/setup
 
 3. Authenticate your ngrok agent using an authtoken: https://dashboard.ngrok.com/get-started/your-authtoken
+
+4. Point Forge to your ngrok config path (https://ngrok.com/docs/agent/config/)
+
+   ```shell
+   forge settings set ngrok-config-path <file>
+   ```
